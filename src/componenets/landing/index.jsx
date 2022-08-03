@@ -1,12 +1,14 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import CustomCard from "../../common/card";
+import Header from "../header";
 
 const Landing = () => {
   
   return (
     <div>
       {/* <Container> */}
+      <Header/>
         <Grid
           container
           sx={{
