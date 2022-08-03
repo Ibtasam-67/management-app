@@ -84,7 +84,7 @@ const SignupPage = () => {
               id="password"
               autoComplete="current-password"
             />
-            <CustomButton text="Sign Up" />
+            <CustomButton text="Sign Up" isAuth />
           </Box>
         </Card>
         {/* <Card> */}

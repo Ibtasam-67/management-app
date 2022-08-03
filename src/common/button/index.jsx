@@ -9,11 +9,11 @@ const CustomButton = (props) => {
       variant="contained"
       sx={{
         fontWeight: "600",
-        width: "100%",
-        marginTop: 5.29,
-        backgroundColor: "#111727",
+        width: props.isAuth ?"100%":"80%",
+        // marginTop: 5.29,
+        backgroundColor: "#000000",
         fontSize: "16px",
-        borderRadius:"10px"
+        borderRadius:"10px",
         // fontFamily: "sans-serif font",
       }}
       onClick={props.handleClick}
