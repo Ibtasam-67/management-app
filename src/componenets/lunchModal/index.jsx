@@ -7,6 +7,7 @@ import Fade from "@mui/material/Fade";
 import { Typography, TextField } from "@mui/material";
 import { FaEdit } from "react-icons/fa";
 import { Button } from "@mui/material";
+ 
 
 const style = {
   position: "absolute",
@@ -21,7 +22,7 @@ const style = {
   p: 4,
 };
 
-export default function LunchModal({ row }) {
+export default function LunchModal() {
   const [open, setOpen] = React.useState(false);
   const [age, setAge] = useState("");
 
@@ -33,11 +34,6 @@ export default function LunchModal({ row }) {
 
   return (
     <div>
-      <FaEdit
-        onClick={handleOpen}
-        style={{ cursor: "pointer", fontSize: "18x" }}
-      />
-
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -50,60 +46,32 @@ export default function LunchModal({ row }) {
         }}
       >
         <Fade in={open}>
-          <Box sx={style}>
-            <Typography variant="h5">User Name</Typography>
-            <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-              <Typography variant="h5" sx={{ mt: 2 }}>
-                Description
-              </Typography>
-              <TextField
-                // onChange={(e) => {
-                //   setName(e.target.value);
-                // }}
-                id="tea"
-                type="text"
-                label="Tea Volume"
-                variant="outlined"
-                // value={name}
-              />
-            </Box>
-            <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-              <Typography variant="h5" sx={{ mt: 6 }}>
-                Roti Quantity
-              </Typography>
-              <TextField
-                sx={{ mt: 5, mr: 5 }}
-                // onChange={(e) => {
-                //   setName(e.target.value);
-                // }}
-                id="roti"
-                type="number"
-                label="Roti"
-                variant="outlined"
-                // value={name}
-              />
-            </Box>
-            <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-              <Typography variant="h5" sx={{ mt: 6 }}>
-                Amount
-              </Typography>
-              <TextField
-                sx={{ mt: 5, mr: 3 }}
-                // onChange={(e) => {
-                //   setName(e.target.value);
-                // }}
-                id="amount"
-                type="number"
-                label="Amount"
-                variant="outlined"
-                // value={name}
-              />
-            </Box>
+          <Box sx={{ ...style, width: "60vw" }}>
+            <Typography variant="h5">Description</Typography>
+            <TextField
+              id="tea"
+              type="text"
+              label="Tea Volume"
+              variant="outlined"
+            />
 
-            <Box
-              style={{ display: "flex", justifyContent: "flex-end" }}
-              sx={{ mt: 8 }}
-            >
+            <Typography variant="h5">Roti Quantity</Typography>
+            <TextField
+              id="roti"
+              type="number"
+              label="Roti"
+              variant="outlined"
+            />
+
+            <Typography variant="h5">Amount</Typography>
+            <TextField
+              id="amount"
+              type="number"
+              label="Amount"
+              variant="outlined"
+            />
+
+            <Box style={{ display: "flex", justifyContent: "flex-end" }}>
               <Button
                 variant="contained"
                 style={{ height: "5vh" }}

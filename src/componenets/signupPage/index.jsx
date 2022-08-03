@@ -11,9 +11,9 @@ import CustomButton from "../../common/button";
 
 const SignupPage = () => {
   return (
-    <Box className="signinGradient">
-      <Container maxWidth="xs">
-        <Card sx={{ maxWidth: 545, height: 560 }}>
+    <Box  sx={{marginTop:"4%"}}>
+      <Container maxWidth="xs" >
+        <Card sx={{  maxWidth: 545, height: 600 }}>
           <img
             src="luminogicsLogo-1.png"
             alt="luminogicsLogo"
@@ -21,7 +21,7 @@ const SignupPage = () => {
           />
           <Typography
             variant="h5"
-            sx={{ fontWeight: "600", fontFamily: "raleway", marginTop: "6%" }}
+            sx={{ fontWeight: "600", fontFamily: "Inter", marginTop: "4%"}}
           >
             Welcome To Luminogics
           </Typography>
@@ -32,20 +32,48 @@ const SignupPage = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              mx: "2px",
+              // mx: "2px",
               transform: "scale(0.8)",
             }}
           >
+            <Typography sx={{ marginRight: "auto",fontWeight:"600" }}>First Name</Typography>
+
             <TextField
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="first name"
+              label="First Name"
+              name="first name"
+              autoComplete="first name"
               autoFocus
             />
+            <Typography sx={{ marginRight: "auto",fontWeight:"600" }}>Last Name</Typography>
+
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="Last Name"
+              label="Last Name"
+              type="Last Name"
+              id="Last Name"
+            
+            />
+            <Typography sx={{ marginRight: "auto",fontWeight:"600" }}>Email</Typography>
+
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="Email"
+              label="Email"
+              type="Email"
+              id="Email"
+            
+            />
+            <Typography sx={{ marginRight: "auto",fontWeight:"600" }}>Password</Typography>
+
             <TextField
               margin="normal"
               required
@@ -56,29 +84,12 @@ const SignupPage = () => {
               id="password"
               autoComplete="current-password"
             />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <CustomButton text="Signup" />
+            <CustomButton text="Sign Up" />
           </Box>
         </Card>
+        {/* <Card> */}
+         {/* <img src="girl.avif" style={{width:"200px",height:"600px",objectFit:"fill"}}/> */}
+        {/* </Card> */}
       </Container>
     </Box>
   );

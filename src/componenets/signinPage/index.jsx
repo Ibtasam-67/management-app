@@ -1,5 +1,4 @@
 import React from "react";
-import "./signinPage.css";
 import {
   Box,
   Container,
@@ -13,9 +12,9 @@ import { Link } from "react-router-dom";
 
 const SigninPage = () => {
   return (
-    <Box className="signinGradient">
+    <Box sx={{ marginTop: "10%" }}>
       <Container maxWidth="xs">
-        <Card sx={{ maxWidth: 545, height: 460 }}>
+        <Card sx={{ maxWidth: 545, height: 500 }}>
           <img
             src="luminogicsLogo-1.png"
             alt="luminogicsLogo"
@@ -23,7 +22,7 @@ const SigninPage = () => {
           />
           <Typography
             variant="h5"
-            sx={{ fontWeight: "600", fontFamily: "raleway", marginTop: "6%" }}
+            sx={{ fontWeight: "600", fontFamily: "Inter", marginTop: "6%" }}
           >
             Welcome To Luminogics
           </Typography>
@@ -38,17 +37,24 @@ const SigninPage = () => {
               transform: "scale(0.8)",
             }}
           >
+            <Typography sx={{ marginRight: "auto", fontWeight: "600" }}>
+              Email
+            </Typography>
             <TextField
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Enter Your Email"
               name="email"
               autoComplete="email"
               autoFocus
             />
+            <Typography sx={{ marginRight: "auto", fontWeight: "600" }}>
+              Password
+            </Typography>
             <TextField
+              sx={{ borderRadius: "10px" }}
               margin="normal"
               required
               fullWidth
@@ -58,11 +64,20 @@ const SigninPage = () => {
               id="password"
               autoComplete="current-password"
             />
-            <CustomButton text="Login" isAuth />
+            <CustomButton text="Sign In" isAuth />
           </Box>
-          <Grid item>
-            <Link to="/signupPage" variant="body2">
-              {"Don't have an account? Sign Up"}
+          <Grid>
+            <span>Don't have an account? </span>
+            <Link to="/signupPage">
+              <span
+                style={{
+                  fontWeight: "600",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+              >
+                Sign Up
+              </span>
             </Link>
           </Grid>
         </Card>

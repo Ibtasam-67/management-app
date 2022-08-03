@@ -8,12 +8,13 @@ const CustomButton = (props) => {
       type="submit"
       variant="contained"
       sx={{
-        fontWeight: "800",
+        fontWeight: "600",
         width: "100%",
         marginTop: 5.29,
-        backgroundColor: "#7346C4",
+        backgroundColor: "#111727",
         fontSize: "16px",
-        fontFamily: "sans-serif font",
+        borderRadius:"10px"
+        // fontFamily: "sans-serif font",
       }}
       onClick={props.handleClick}
     >
