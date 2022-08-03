@@ -1,0 +1,9 @@
+.landingGradient {
+    /* background: linear-gradient(180deg, #76baf1 25%, #9b8ab6 100%); */
+     height: 85vh;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  

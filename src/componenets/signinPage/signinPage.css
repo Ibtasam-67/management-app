@@ -1,0 +1,6 @@
+.signinGradient {
+  background: linear-gradient(180deg, #76baf1 25%, #9b8ab6 100%);
+  /* background: #FFFAFA; */
+  height: 85vh;
+  padding-top: 50px
+}
